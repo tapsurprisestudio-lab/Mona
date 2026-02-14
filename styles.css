@@ -421,13 +421,13 @@ html[dir="rtl"] {
 }
 
 .letter-card {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(20px);
-    border-radius: 24px;
-    padding: 35px 28px;
-    box-shadow: 0 20px 60px var(--shadow-soft);
-    border: 1px solid rgba(198, 167, 105, 0.12);
-    animation: fadeInUp 1s ease;
+    background: white;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    overflow: visible;
 }
 
 .letter-image {
@@ -463,26 +463,19 @@ html[dir="rtl"] {
 
 .letter-text {
     font-family: 'Cairo', sans-serif;
-    font-size: 1.15rem;
-    line-height: 2.1;
-    color: var(--text-dark);
+    font-size: 18px;
+    line-height: 1.9;
+    color: #5c4a3a;
     text-align: right;
+    direction: rtl;
 }
 
 .letter-text .paragraph {
-    margin-bottom: 22px;
-    opacity: 0;
-    transform: translateY(15px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.letter-text .paragraph.visible {
-    opacity: 1;
-    transform: translateY(0);
+    margin-bottom: 18px;
 }
 
 .letter-text .paragraph.empty {
-    height: 20px;
+    height: 18px;
 }
 
 .letter-signature {
