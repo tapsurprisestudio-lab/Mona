@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>عيد ميلاد سعيد لأمي مروة 💕</title>
+    <title>عيد ميلاد سعيد يا أمي مروة 💕</title>
     <meta name="description" content="رسالة عيد ميلاد خاصة من منى إلى أمها مروة">
     <meta property="og:title" content="عيد ميلاد سعيد يا أمي ❤️">
-    <meta property="og:description" content="رسالة حب خاصة من منى إلى أمها">
+    <meta property="og:description" content="رسالة حب خاصة من منى إلى أمها مروة">
 
     <!-- Google Fonts - Cairo (Elegant Arabic) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
@@ -31,7 +31,7 @@
         <svg id="musicOffIcon" viewBox="0 0 24 24" style="display: none;">
             <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
         </svg>
-        <span class="tooltip">الموسيقى 🔊</span>
+        <span class="tooltip">الموسيقى 🎵</span>
     </button>
 
     <!-- Sparkle Container (Envelope Opening) -->
@@ -43,16 +43,45 @@
     <!-- Floating Hearts Background -->
     <div class="floating-hearts" id="floatingHearts"></div>
 
+    <!-- Golden Dust Particles -->
+    <div class="particles" id="particles"></div>
+
     <!-- YouTube Player (Hidden) -->
     <div id="youtubePlayer" style="display: none;"></div>
 
     <!-- ===================================
-         Page 1: Digital Letter (Envelope)
+         SECTION 1: CINEMATIC INTRO
          =================================== -->
     <div class="page page-1 active" id="page1">
-        <section class="envelope-section">
-            <h1 class="greeting-text">إلى أغلى قلب في حياتي 🤍</h1>
-            <p class="greeting-sub">لدي رسالة خاصة لك يا أمي...</p>
+        <div class="intro-background" style="background-image: url('https://i.imgur.com/RvhtAST.jpeg')"></div>
+        <div class="intro-overlay"></div>
+
+        <section class="intro-content">
+            <div class="intro-text-1" id="introText1">
+                <p>هناك أشخاص…</p>
+                <p>وجودهم في حياتنا نعمة لا تُقدّر بثمن 🤍</p>
+            </div>
+
+            <div class="intro-text-2" id="introText2">
+                <p>واليوم…</p>
+                <p>أحتفل بأعظم نعمة في حياتي</p>
+            </div>
+
+            <button class="btn-primary" id="introContinueBtn">
+                متابعة 💌
+            </button>
+        </section>
+    </div>
+
+    <!-- ===================================
+         SECTION 2: ENVELOPE
+         =================================== -->
+    <div class="page page-2" id="page2">
+        <div class="envelope-background" style="background-image: url('https://i.imgur.com/RvhtAST.jpeg')"></div>
+        <div class="envelope-overlay"></div>
+
+        <section class="envelope-content">
+            <h1 class="envelope-title">لدي رسالة خاصة لك يا أمي 🤍</h1>
 
             <div class="envelope-wrapper" id="envelopeWrapper">
                 <div class="envelope" id="envelope">
@@ -63,69 +92,74 @@
                 </div>
             </div>
 
-            <button class="open-btn" id="openBtn">افتحي الرسالة 💌</button>
+            <button class="btn-primary" id="openBtn">
+                افتحي الرسالة 💌
+            </button>
         </section>
     </div>
 
     <!-- ===================================
-         Page 2: Emotional Letter
+         SECTION 3: THE MAIN LETTER
          =================================== -->
-    <div class="page page-2" id="page2">
-        <div class="letter-container">
-            <header class="letter-header">
-                <h2 class="letter-title">أمي مروة 🤍</h2>
-            </header>
+    <div class="page page-3" id="page3">
+        <div class="letter-page-bg"></div>
 
-            <div class="letter-content" id="letterContent">
-                <!-- Content will be typed dynamically -->
-            </div>
+        <section class="letter-content">
+            <div class="letter-card">
+                <img src="https://i.imgur.com/9MQCeGO.jpeg" alt="لحظة جميلة" class="letter-image" id="letterImage">
 
-            <div class="counter-section">
-                <p class="counter-label">حب منى لك</p>
-                <div class="counter-value" id="counterValue">0%</div>
-            </div>
+                <h2 class="letter-heading">إلى ماما مروة الغالية 🤍</h2>
 
-            <div class="letter-signature" id="letterSignature">
-                <p class="signature-name">من ابنتك... منى 🤍</p>
-                <p class="signature-sub">تحبك وتقدرك</p>
+                <div class="letter-text" id="letterText">
+                    <!-- Letter content will be animated here -->
+                </div>
+
+                <div class="letter-signature" id="letterSignature">
+                    <p class="signature-main">ابنتكِ التي تحبك أكثر مما تتصورين…</p>
+                    <p class="signature-name">منى 🤍</p>
+                </div>
+
+                <button class="btn-primary" id="letterContinueBtn">
+                    متابعة ✨
+                </button>
             </div>
-        </div>
+        </section>
     </div>
 
     <!-- ===================================
-         Page 3: Final Celebration
+         SECTION 4: LOVE FINALE
          =================================== -->
-    <div class="page page-3" id="page3">
-        <div class="celebration-container">
-            <h1 class="celebration-title">كل عام وأنتِ بخير يا أمي 🤍</h1>
-            <p class="celebration-subtitle">ويارب تبقى ضحكتك تملأ حياتي دائمًا</p>
+    <div class="page page-4" id="page4">
+        <div class="finale-background"></div>
 
-            <div class="final-counter">
-                <div class="heart-display">💕</div>
-                <p class="love-text">أحبك لأبعد حدود 💖</p>
-            </div>
+        <section class="finale-content">
+            <div class="finale-card">
+                <p class="love-label">حب منى لكِ…</p>
 
-            <div class="share-section">
-                <div class="share-buttons">
-                    <button class="share-btn" id="copyLinkBtn">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
-                        </svg>
-                        نسخ الرابط 🔗
+                <div class="counter-section">
+                    <div class="counter-value" id="counterValue">0%</div>
+                </div>
+
+                <p class="love-message" id="loveMessage">حبّي لكِ 100% … بل أكثر 🤍</p>
+
+                <h2 class="finale-title">كل عام وأنتِ بخير يا أمي مروة 🌷</h2>
+
+                <div class="share-buttons-section">
+                    <button class="btn-share" id="copyLinkBtn">
+                        <span class="btn-icon">🔗</span>
+                        نسخ الرابط
                     </button>
-                    <button class="share-btn" id="shareBtn" style="display: none;">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/>
-                        </svg>
-                        مشاركة 📤
+                    <button class="btn-share" id="shareBtn" style="display: none;">
+                        <span class="btn-icon">💌</span>
+                        مشاركة
                     </button>
                 </div>
             </div>
-        </div>
 
-        <footer class="page-footer">
-            صُمم بحب ❤️ Tap2Surprise Studio ✨
-        </footer>
+            <footer class="finale-footer">
+                Tap2Surprise Studio 🤍
+            </footer>
+        </section>
     </div>
 
     <!-- Toast Notification -->
